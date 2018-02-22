@@ -132,19 +132,19 @@ public class MyMusicFragment extends Fragment implements TabLayout.OnTabSelected
         if (drawable != null) {
             Drawable icon = DrawableCompat.wrap(drawable);
             DrawableCompat.setTintList(icon, tabColors);
-            tabLayout.addTab(tabLayout.newTab().setIcon(icon));
+            tabLayout.addTab(tabLayout.newTab().setIcon(icon).setText(R.string.fragment_title_artists));
         }
         drawable = res.getDrawable(R.drawable.ic_album_24dp, null);
         if (drawable != null) {
             Drawable icon = DrawableCompat.wrap(drawable);
             DrawableCompat.setTintList(icon, tabColors);
-            tabLayout.addTab(tabLayout.newTab().setIcon(icon));
+            tabLayout.addTab(tabLayout.newTab().setIcon(icon).setText(R.string.fragment_title_albums));
         }
         drawable = res.getDrawable(R.drawable.ic_my_library_music_24dp, null);
         if (drawable != null) {
             Drawable icon = DrawableCompat.wrap(drawable);
             DrawableCompat.setTintList(icon, tabColors);
-            tabLayout.addTab(tabLayout.newTab().setIcon(icon));
+            tabLayout.addTab(tabLayout.newTab().setIcon(icon).setText(R.string.fragment_title_all_tracks));
         }
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 

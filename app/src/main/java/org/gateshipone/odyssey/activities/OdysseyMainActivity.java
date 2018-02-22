@@ -126,7 +126,7 @@ public class OdysseyMainActivity extends GenericActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        boolean mBackToSettings = false;
+        boolean backToSettings = false;
 
         // restore drag state
         if (savedInstanceState != null) {
@@ -148,7 +148,7 @@ public class OdysseyMainActivity extends GenericActivity
                             mShowNPV = true;
                         }
 
-                        mBackToSettings = extras.getBoolean(MAINACTIVITY_INTENT_EXTRA_BACKTOSETTINGS, false);
+                        backToSettings = extras.getBoolean(MAINACTIVITY_INTENT_EXTRA_BACKTOSETTINGS, false);
                     }
                 }
             }
@@ -186,7 +186,7 @@ public class OdysseyMainActivity extends GenericActivity
             mDrawerToggle.syncState();
         }
 
-        int navId = mBackToSettings ? R.id.nav_settings : getDefaultViewID();
+        int navId = backToSettings ? R.id.nav_settings : getDefaultViewID();
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         if (navigationView != null) {
